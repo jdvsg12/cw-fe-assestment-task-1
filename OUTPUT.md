@@ -1,15 +1,18 @@
-[Example output - you should start from scratch]
-
 ## Changes Made
 
-###[Component Name]
+### [Component Home]
 
-1. useEffect in line 37
-   - Issue: useEffect missing dependencies causing stale state
-   - Fix: Added required dependencies to useEffect array
-2. Accessibility issue with the search icon line 98
-   - Issue: search icon is not accessible
-   - Fix: Added search icon to the input field
+1.  Move app to folder pages
+   - Issue: Current structure limits project scalability for new pages/sections.
+   - Fix: Moved App to /pages folder to enable modular expansion.
+   
+2. Rename App to Home
+   - Issue: App.jsx name doesn't clearly represent its role as the main page.
+   - Fix: Renamed to Home.jsx to better reflect its purpose and follow naming conventions.
+
+3. Replace static tags useState with VariantType dictionary in line 9
+   - Issue: Unnecessary React state usage for static tag values, impacting performance and maintainability.
+   - Fix: Replaced static tags useState with type-safe TagVariants and TAGS dictionary.
 
 ### [Another Component Name]
 
