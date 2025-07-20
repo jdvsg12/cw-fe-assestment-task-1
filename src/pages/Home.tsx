@@ -63,12 +63,12 @@ function Header({ initialTerm, onSearchHeader }: { initialTerm: string, onSearch
             onChange={(event) => onSearchHeader(event.target.value)}  // HandlerSearchValue
             placeholder="Search"
             className="max-w-40 pl-12 bg-gray-800 text-white placeholder:text-base placeholder:text-gray-300 border-none focus:ring-0 rounded-xl w-full focus-visible:ring-0"
-            aria-label="Buscar en Wortionary"
+            aria-label="Search in Wortionary"
           />
         </search>
 
         <Avatar className="w-8 h-8">
-          <AvatarImage src="/task1/profile.webp" alt="Foto de perfil" />
+          <AvatarImage src="/task1/profile.webp" alt="User profile picture" />
           <AvatarFallback>UN</AvatarFallback>
         </Avatar>
       </nav>
@@ -146,7 +146,6 @@ function SearchHero({ initialValue, onSearch, }: {
     </form>
   );
 }
-
 interface TagListProp {
   title: string,
   tags: string[],
@@ -160,19 +159,22 @@ function TagList({ title, tags }: TagListProp) {
       <ul
         className="flex flex-wrap gap-3 p-3"
         role="list"
-        aria-label={`Etiquetas relacionadas con ${title}`}
+        aria-label={`Related tags ${title}`}
       >
-        {tags.map((tag) => (
-          <li key={tag} role="listitem">
-            <Badge
-              className="bg-gray-800 text-sm font-medium rounded-xl text-white hover:bg-gray-700 flex justify-center items-center py-1.5 px-4 cursor-pointer"
-              aria-label={`Filtrar por ${tag}`}
-              tabIndex={0} // this make focusable witch tab
-            >
-              {tag}
-            </Badge>
-          </li>
-        ))}
+        {tags.map((tag) => {
+          return (
+            <li key={tag} role="listitem">
+              <Badge
+                className="bg-gray-800 text-sm font-medium rounded-xl text-white hover:bg-gray-700 flex justify-center items-center py-1.5 px-4 cursor-pointer"
+                aria-label={`Select ${tag}`}
+                tabIndex={0} // this make focusable witch tab
+              >
+                {tag}
+              </Badge>
+            </li>
+          )
+
+        })}
       </ul>
     </section>
   );
