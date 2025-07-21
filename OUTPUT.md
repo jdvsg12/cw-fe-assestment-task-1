@@ -149,3 +149,15 @@
 3. Utils  
    - Issue: Selector container 
    - Fix: Add selector container to section  
+
+### [sidebar Component]
+
+1. Import types (Line 5)
+   - Issue: VariantProps was not imported correctly.
+   - Fix: Added type keyword to properly import VariantProps.
+
+### [sonner Component]
+
+1. Import types (Line 2)  
+   - Issue: TosterProps was not import correcttly.
+   - Fix: Added type keyword to properly import TosterProps
